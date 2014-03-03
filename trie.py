@@ -15,7 +15,7 @@ class Trie:
         if len(query) == 0:
             return
 
-        self.__search(self.root, query, "", results_to_return)
+        self.__search(self.root, query, '', results_to_return)
 
     def __add(self, node, value):
         if len(value) == 0:
@@ -32,7 +32,7 @@ class Trie:
             node.children[key] = new_node
             self.__add(new_node, new_value)
 
-    def __search(self, node, query, results="", results_to_return=[]):
+    def __search(self, node, query, results='', results_to_return=[]):
         if len(query) > 0:
             key = query[0]
             query = query[1:]
